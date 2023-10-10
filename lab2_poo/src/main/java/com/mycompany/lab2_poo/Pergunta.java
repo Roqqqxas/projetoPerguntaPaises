@@ -1,23 +1,26 @@
-package com.mycompany.lab2_poo;
+package com.mycompany.projetopaises;
 
-public class Pergunta {
+public class PerguntasPaises {
 
-    private String pergunta;
+    private final String pergunta;
     private String opcaoA;
     private String opcaoB;
     private String opcaoC;
-    private char respostaCorreta;
+    private char respostaCerta;
 
-    public Pergunta(String pergunta, String opcaoA, String opcaoB, String opcaoC, char respostaCorreta) {
+    public PerguntasPaises(String pergunta, String opcaoA, String opcaoB, String opcaoC, char respostaCerta) {
+
         this.pergunta = pergunta;
         this.opcaoA = opcaoA;
         this.opcaoB = opcaoB;
         this.opcaoC = opcaoC;
-        this.respostaCorreta = respostaCorreta;
+        this.respostaCerta = respostaCerta;
+
     }
 
-    public String getPergunta() {
+    public String Pergunta() {
         return pergunta;
+
     }
 
     public void exibirPergunta() {
@@ -27,11 +30,11 @@ public class Pergunta {
         System.out.println("c) " + opcaoC);
     }
 
-    public char getRespostaCorreta() {
-        return respostaCorreta;
+    public char getRepostaCerta() {
+        return respostaCerta;
     }
 
-    public boolean verificarResposta(char resposta) {
-        return resposta == respostaCorreta;
+    public boolean verificarespostaCerta(char resposta) {
+        return resposta == respostaCerta;
     }
 }
